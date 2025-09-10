@@ -1,0 +1,28 @@
+[project]
+name = "langflowx"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dspy>=3.1.0",
+    "jq>=1.11.0",
+    "json-repair>=0.30.3",
+    "langchain-cohere>=0.4.6",
+    "langchain-core>=0.3.84",
+    "langchain-openai>=0.3.35",
+    "langextract>=1.2.1",
+    "langflow",
+    "ltp>=4.2.14",
+    "pydantic>=2.11.10",
+]
+
+[tool.uv.sources]
+langflow = { git = "https://github.com/langflow-ai/langflow.git", rev = "v1.8.4" }
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["langflowx"]

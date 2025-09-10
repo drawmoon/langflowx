@@ -1,0 +1,32 @@
+# Assume Python 3.12
+target-version = "py313"
+
+line-length = 88
+indent-width = 4
+
+exclude = [".*", "scripts"]
+
+
+[lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "ARG", # flake8-unused-arguments
+    "PTH", # flake8-use-pathlib
+    "RUF", # Ruff
+    "TID", # flake8-tidy-imports
+]
+
+ignore = ["D100", "D104", "E501"]
+
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
